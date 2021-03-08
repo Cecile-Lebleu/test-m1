@@ -1,0 +1,26 @@
+.feature {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 2rem 0;
+
+	.content {
+		
+		span {
+			opacity: 0.5;
+
+			a {
+				color: var(--text);
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: var(--link);
+			}
+		}
+	}
+	.check {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

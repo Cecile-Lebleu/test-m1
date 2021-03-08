@@ -1,0 +1,28 @@
+.card {
+	margin: 1rem;
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	filter: var(--shadow);
+	background-color: var(--background);
+	transition-duration: 400ms;
+	transition-property: background-color;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media screen and (max-width: 60rem){
+		width: 100%;
+		h5, p {
+			margin: 0.5rem
+		}
+	}
+	* {
+		text-align: center;
+	}
+}
+
+.card:hover {
+	transition-duration: 400ms;
+	transition-property: background-color;
+	background-color: var(--stronger-background);
+}

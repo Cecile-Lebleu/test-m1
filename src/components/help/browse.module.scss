@@ -1,0 +1,17 @@
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(12rem, 40rem));
+	// display: flex;
+	// justify-content: space-between;
+	// flex-wrap: wrap;
+
+	@media screen and (max-width: 60rem) {
+		grid-template-columns: 1fr;
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--text);
+		display: flex;
+	}
+}

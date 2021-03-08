@@ -1,0 +1,36 @@
+.cta {
+   background-color: var(--stronger-background);
+   border-radius: 0.5rem;
+   filter: var(--shadow);
+   margin: 4rem 0;
+   display: grid;
+   grid-template-columns: 7rem 1fr;
+   grid-template-rows: 7rem 1fr;
+   grid-gap: 2rem;
+   padding: 2rem;
+
+   img.author {
+      width: 7rem;
+      border-radius: 50%;
+   }
+
+   .title {
+      align-self: center;
+      span {
+         margin: 0;
+         text-transform: uppercase;
+         font-size: 0.9rem;
+         letter-spacing: 0.1rem;
+      }
+      h3 {
+         margin: 0;
+      }
+   }
+   .content {
+      grid-column: 1 / span 2;
+
+      p {
+         margin-top: 0;
+      }
+   }
+}

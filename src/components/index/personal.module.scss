@@ -1,0 +1,27 @@
+.personal {
+   display: grid;
+   grid-template-columns: 1fr 100px 100px 1fr;
+	grid-template-rows: 1fr 1fr;
+	margin-bottom: 8rem;
+
+	@media screen and ( max-width: 1000px ) {
+		display: block;
+	}
+
+   .graphic {
+      grid-area: 1 / 1 / 3 / 5;
+      margin-top: auto;
+   }
+
+   .content {
+      grid-area: 1 / 4 / 2 / 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+		p {
+			text-align: left;
+			hyphens: none;
+		}
+   }
+}

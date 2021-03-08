@@ -1,0 +1,40 @@
+.icon {
+   margin: 0.5rem;
+   a {
+      svg {
+         path, circle, rect {
+            fill: var(--background);
+            opacity: 0.5;
+            transition-duration: 200ms;
+         }
+         polyline {
+            stroke: var(--background);
+            opacity: 0.5;
+            transition-duration: 200ms;
+			}
+      }
+   }
+   a:hover {
+      svg {
+         path, polyline, circle, rect {
+            transition-duration: 200ms;
+            opacity: 1;
+         }
+      }
+   }
+}
+.star {
+   width: 1rem;
+   path {
+      fill: rgb(255, 149, 0);
+   }
+}
+
+.stroked {
+	fill: none;
+	stroke: var(--text);
+}
+
+.filled {
+	fill: var(--text);
+}

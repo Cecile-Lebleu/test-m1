@@ -1,0 +1,15 @@
+.helpList {
+	padding-top: 5rem;
+	margin-bottom: 0;
+
+	a {
+		color: var(--text);
+		text-decoration: none;
+	}
+	a:hover {
+		color: var(--link);
+	}
+	a:hover li::after {
+		content: "  →"
+	}
+}

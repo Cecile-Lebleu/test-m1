@@ -1,0 +1,15 @@
+.cta {
+   background-color: var(--text);
+   border-radius: 0.5rem;
+   color: var(--background);
+   margin: 4rem 0;
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+   grid-gap: 2rem;
+   padding: 2rem;
+
+   p {
+      margin: auto 0;
+      text-align: left;
+   }
+}

@@ -1,0 +1,99 @@
+---
+title: X-Callback-URL Scheme Documentation
+type: [Help]
+categories: [Technical Questions]
+tags: [extensions, links]
+date: 2020-01-31
+order: 1000
+---
+
+Diarly supports the custom url scheme `diarly://` which allows creating links to interact with the app.
+
+`diarly://x-callback-url/[action]?[parameters]`
+
+## Note Identifier
+
+You can obtain the `<identifier>` for the note by right-clicking on the note in the list view and choosing `Copy Link`.
+On iPhone and iPad you can swipe left the note and you will have a popup menu where you can choose `Copy Link`.
+
+`<identifier>` of daily entries consists of the `day` and `journal` parameter:
+
+```
+day          dd-mm-yyyy  - date of entry
+journal     name or identifier of a journal to open
+```
+
+If you don't specify the `journal` identifier, Diarly will use a default one.
+
+Notes have unique id's and `<identifier>` is simply `id`:
+
+```
+id  		unique id of the note
+```
+
+*Please note:* Using dates instead of 'id' allows you to add identifier to any day in Diarly without the note 'id' or even if note exists
+
+## Actions
+
+### Open
+
+ `diarly://x-callback-url/open?<identifier>`
+
+e.g
+
+`diarly://x-callback-url/open?day=01-01-2019&journal=2bc759b2-9dd8-4186-ba64-12890f5642c9`
+
+*Try it:* If you are using a device with Diarly installed, you can [click here](diarly://open?day=01-01-2010) to open note for 1st January 2010.
+
+### Append / Add
+
+`diarly://x-callback-url/append?<identifier>&text=...`
+
+Parameters:
+
+```
+text 	     - text to append/add to the note specified by <identifier>
+<identifier> - please see: note identifier
+```
+
+e.g
+`diarly://x-callback-url/append?day=16-12-2020&text=Hello World`
+
+*Try it:* If you are using a device with Diarly installed, you can [click here](diarly://append?text=hello%20world) to append/add "hello world" to today entry
+
+
+
+### Create Note
+
+`diarly://x-callback-url/create?journal=..&text=...`
+
+Parameters:
+
+```
+text 	    - text of new note
+journal     - name or identifier of a journal to create a new note in
+```
+
+e.g
+`diarly://x-callback-url/create?text=Hello World`
+
+
+
+
+### Search 
+
+
+`diarly://search?text=...`
+
+
+Parameters:
+
+```
+text 	    - text to search
+```
+
+e.g
+`diarly://search?text=@onThisDay`
+
+
+*Try it:* If you are using a device with Diarly installed, you can [click here](diarly://search?text=@onThisDay) to search for entries created on this day

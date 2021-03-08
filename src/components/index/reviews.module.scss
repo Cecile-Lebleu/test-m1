@@ -1,0 +1,19 @@
+.reviews {
+	margin-bottom: 8rem;
+
+   h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+   }
+   .container {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 2rem;
+      grid-template-rows: auto;
+   
+      @media screen and ( max-width: 1000px ) {
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(3, auto);
+      }
+   }
+}

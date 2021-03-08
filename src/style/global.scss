@@ -1,0 +1,499 @@
+@import "./fonts.css";
+
+* {
+   margin: 0
+}
+
+:root {
+   --stronger-background: #ffffff;
+   --background: #F7F8FA;
+	--midtone: #b09cb7;
+	--code: #e5dbeb;
+   --shadow: drop-shadow(5px 5px 10px rgba(176, 156, 183, 0.3));
+   --link: #A415DA;
+   --text: #28074f;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--stronger-background: #32273f;
+		--background: #1e1825;
+		--midtone: #735E7B;
+		--code: #4b3e52;
+		--shadow: drop-shadow(5px 5px 10px rgba(11, 4, 14, 0.3));
+		--link: rgb(207, 116, 240);
+		--text: #e5e3e8;
+	}
+}
+
+html {
+   margin: 0 auto;
+   scroll-behavior: smooth;
+   
+   .diarly_logo {
+      fill: var(--text);
+	}
+	
+	img .doodle * {
+		fill: red;
+		fill-rule:nonzero;
+	}
+	
+	.doodleText {
+		padding: 2.5rem;
+		font-size: 2rem;
+		font-family: "Caveat";
+		* {
+			font-size: 2rem;
+			font-family: "Caveat";
+		}
+	}
+	
+   body {
+      background-color: var(--background);
+      color: var(--text);
+      font-family: "DM Sans";
+      font-size: 16px;
+      
+      @media screen and (max-width: 40rem) {
+         font-size: 14px;
+      }
+
+      h1,
+      h2 {
+         font-family: 'DM Serif Display', serif;
+         font-weight: 400;
+      }
+      
+      h1 {
+         font-size: 3.5rem;
+         line-height: 1.1em;
+         font-weight: 200;
+         
+         @media screen and (max-width: 50rem) {
+            font-size: 3.25rem;
+
+            @media screen and (max-width: 40rem) {
+               font-size: 3rem;
+
+               @media screen and (max-width: 30rem) {
+                  font-size: 2.8rem;
+
+                  @media screen and (max-width: 22rem) {
+                     font-size: 2.2rem;
+                  }
+               }
+            }
+         }
+      }
+
+      h2 {
+         font-size: 2.6rem;
+         line-height: 1.1em;
+         margin: 2rem 0;
+
+         @media screen and (max-width: 50rem) {
+            font-size: 2.5rem;
+
+            @media screen and (max-width: 40rem) {
+               font-size: 2.3rem;
+
+               @media screen and (max-width: 30rem) {
+                  font-size: 2.2rem;
+
+                  @media screen and (max-width: 22rem) {
+                     font-size: 1.9rem;
+                  }
+               }
+            }
+         }
+      }
+      
+      h3 {
+         font-size: 2rem;
+         font-weight: 100;
+         margin: 2rem 0;
+
+         @media screen and (max-width: 50rem) {
+            font-size: 1.9em;
+
+            @media screen and (max-width: 40rem) {
+               font-size: 1.8em;
+
+               @media screen and (max-width: 30rem) {
+                  font-size: 1.7em;
+
+                  @media screen and (max-width: 22rem) {
+                     font-size: 1.6em;
+                  }
+               }
+            }
+         }
+      }
+      
+      
+      h4 {
+         font-size: 1.4rem;
+         font-weight: 200;
+         text-transform: uppercase;
+         letter-spacing: 2.5px;
+         margin: 1.5rem 0;
+
+         @media screen and (max-width: 50rem) {
+            font-size: 1.3em;
+
+            @media screen and (max-width: 40rem) {
+               font-size: 1.2em;
+            }
+         }
+      }
+      
+      h5 {
+         font-weight: 500;
+         font-size: 1.3rem;
+         margin: 1.5rem 0;
+
+         @media screen and (max-width: 50rem) {
+            font-size: 1.4em;
+
+            @media screen and (max-width: 40rem) {
+               font-size: 1.3em;
+            }
+         }
+      }
+      
+      h6 {
+         font-size: 1.1rem;
+         font-weight: 900;
+      }
+      
+      a {
+         color: var(--link);
+      }
+      
+      p {
+         margin: 1.5rem 0;
+         font-size: 1.1rem;
+         line-height: 1.6rem;
+         text-align: justify;
+         hyphens: auto;
+      }
+		
+		input, input * {
+			font-family: "DM Sans";
+			font-size: 1rem;
+		}
+		
+      ul,
+      li {
+			font-size: 1.1rem;
+			margin: 0.5rem 0;
+		}
+		
+		li p {
+			margin: 0;
+		}
+      
+      img {
+         object-fit: contain
+      }
+      
+      strong {
+         font-weight: 900;
+      }
+      
+      button {
+         display: inline-block;
+         border: 1px solid var(--text);
+         border-radius: 0.5rem;
+         padding: 0.5rem 1rem;
+         font-family: "DM Sans";
+         font-size: 1rem;
+         font-weight: 500;
+      }
+
+      blockquote {
+         margin: 1rem 0;
+         border-left: 2px solid var(--midtone);
+         padding: 1rem 1.5rem;
+         font-style: italic;
+         background-color: var(--stronger-background);
+
+         p {
+            margin: 0;
+         }
+		}
+		
+		code {
+			font-family: "DM Mono";
+			font-size: 1rem;
+			background-color: var(--code);
+			padding: 0.15rem 0.3rem 0.1rem 0.3rem;
+			border-radius: 0.2rem;
+		}
+   }
+}
+
+
+/* ANIMATION *****************************************************************/
+
+@keyframes fade-in-down {
+   from {
+      transform: translateY(-50px);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+@keyframes fade-in-up {
+   from {
+      transform: translateY(100px);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+/* MAIN **********************************************************************/
+
+
+main {
+
+   >div {
+
+      @media screen and (max-width: 640px) {
+         margin-bottom: 96px;
+      }
+
+      @media screen and (max-width: 480px) {
+         margin-bottom: 64px;
+      }
+   }
+
+   img {
+      max-width: 100%
+   }
+
+   .center {
+      text-align: center;
+   }
+
+}
+
+
+
+
+/* Cookies *******************************************************************/
+
+.ch2 {
+	* {
+		color: var(--text);
+		font-family: "DM Sans";
+		font-size: 1rem;
+	}
+	.ch2-theme-bar .ch2-dialog {
+		box-shadow: none;
+	}
+	.ch2-container, .ch2-theme-bar, .ch2-style-light, .ch2-block, .ch2-scale {
+		background-color: var(--background);
+		// box-shadow: none;
+		div.ch2-dialog, .ch2-dialog-bottom, .ch2-visible {
+			border-radius: 0;
+			border: none;
+			border-top: 1px solid var(--text);
+			padding: 1rem;
+			background-color: var(--background);
+			
+			div.ch2-dialog-content {
+				color: var(--text);
+				p, p a {
+					color: var(--text);
+					line-height: 1.1rem;
+					font-size: 1rem;
+					hyphens: none;
+					
+					strong {
+						line-height: 1.5rem;
+						color: var(--text);
+					}
+					
+					a {
+						text-decoration: underline;
+						color: var(--link);
+						border-bottom: none;
+					}
+					a:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			
+			.ch2-dialog-actions {
+				button.ch2-btn, .ch2-btn-primary, .ch2-allow-all-btn {
+					background-color: var(--background);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 1rem 0.2rem;
+					
+					border-radius: 0.5rem;
+					border: 1px solid var(--text);
+					
+					color: var(--text);
+					text-transform: none;
+					font-size: 1rem;
+					font-weight: 400;
+					
+					transition-duration: 200ms;
+					box-shadow: none;
+				}
+			}
+			button.ch2-btn:hover {
+				box-shadow: none;
+				background-color: var(--stronger-background);
+			}
+		}
+		
+		.ch2-settings, .ch2-settings-scan, .ch2-visible {
+			background-color: var(--background);
+			box-shadow: none;
+			border: 1px solid var(--text);
+			border-radius: 0.5rem;
+			* {
+				color: var(--text)
+			}
+			
+			.ch2-settings-header {
+				p, p.ch2-settings-title, strong {
+					font-size: 2rem;
+					font-family: 'DM Serif Display', serif;
+					height: auto;
+				}
+			}
+			.ch2-settings-tabs {
+				ul {
+					border-bottom: 1px solid var(--midtone);
+					
+					li {
+						a {
+							color: var(--text)
+						}
+					}
+					li.active {
+						a {
+							border: 1px solid var(--midtone);
+							background: var(--background);
+							border-bottom-color: var(--background);
+							
+						}
+					}
+				}
+			}
+			.ch2-settings-content {
+				.ch2-settings-tab-container {
+					p {
+						a {
+							text-decoration: underline;
+							border: none;
+							color: var(--link);
+						}
+					}
+					button.ch2-btn, button.ch2-btn-secondary, button.ch2-allow-all-btn {
+						background-color: var(--background);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 0.8rem 1rem;
+						
+						border-radius: 0.5rem;
+						border: 1px solid var(--text);
+						
+						color: var(--text);
+						text-transform: none;
+						font-size: 1rem;
+						font-weight: 400;
+						
+						transition-duration: 200ms;
+						box-shadow: none;
+					}
+					.ch2-settings-declaration {
+						p {
+							font-size: 1rem;
+						}
+						.ch2-declaration-category {
+							table {
+								tbody {
+									tr {
+										td {
+											border-bottom: 0.5rem solid var(--background);
+											background-color: var(--stronger-background);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.ch2-settings-options {
+					div.ch2-settings-option {
+						.ch2-switch input:disabled+label::before {
+							label::before {
+								background: red !important;
+							}
+						}
+						.ch2-settings-option-details {
+							p {
+								font-size: 1rem;
+							}
+						}
+					}
+				}
+			}
+			.ch2-settings-actions {
+				background-color: var(--background);
+				border-top: none;
+				
+				p:nth-child(1) {
+					display: none;
+				}
+				button.ch2-btn, button.ch2-btn-primary, button.ch2-save-settings-btn {
+					background-color: var(--background);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 0.8rem 1rem;
+					
+					border-radius: 0.5rem;
+					border: 1px solid var(--text);
+					
+					color: var(--text);
+					text-transform: none;
+					font-size: 1rem;
+					font-weight: 400;
+					
+					transition-duration: 200ms;
+					box-shadow: none;
+				}
+			}
+		}
+		.ch2-settings-declaration {
+			table {
+				tbody {
+					tr {
+						td {
+							p {
+								background-color: var(--stronger-background) !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

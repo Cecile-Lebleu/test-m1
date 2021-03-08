@@ -1,0 +1,42 @@
+.container {
+   background-color: var(--stronger-background);
+   padding: 1rem;
+   filter: var(--shadow);
+   border-radius: 0.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   .header {
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+         font-family: 'DM Serif Display', serif;
+      }
+
+      .stars {
+         min-width: 110px;
+         display: flex;
+         justify-content: flex-end;
+
+         @media screen and (max-width: 640px) {
+            min-width: 90px;
+         }
+
+         div {
+            height: 1rem;
+            margin: 3px;
+         }
+      }
+   }
+   
+   p {
+      margin: 1rem 0;
+   }
+
+   span {
+      font-size: 0.8rem;
+      opacity: 0.6;
+   }
+}
